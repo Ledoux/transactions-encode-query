@@ -1,8 +1,18 @@
-import { WHERE } from './constants'
+import { PARSE,
+  WHERE
+} from './constants'
 
 export function getQueryString (query) {
   return Object.keys(query)
-    .map(key => `${key}=${query[key]}`)
+    .map(key => {
+      const value = query[key]
+      // special parse
+      const valueString = typeof value !== 'string'
+      ? `${PARSE}${JSON.stringify(value)}`
+      : value
+      // return
+      return `${key}=${valueString}`
+    })
     .join('&')
 }
 
