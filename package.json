@@ -11,7 +11,9 @@
     ]
   },
   "author": "Erwan Ledoux",
-  "dependencies": {},
+  "dependencies": {
+    "lodash.camelcase": "^4.3.0"
+  },
   "description": "Define how we encode query backend or frontend side",
   "devDependencies": {
     "ava": "^0.18.2",
@@ -30,5 +32,5 @@
     "dev": "npm run dev-watch",
     "dev-watch": "nodemon --watch src --exec \"npm run compile\""
   },
-  "version": "0.0.2"
+  "version": "0.0.3"
 }
