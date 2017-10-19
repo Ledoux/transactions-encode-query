@@ -6,14 +6,21 @@ export const JOINS = '_joins_'
 export const LIMIT = '_limit_'
 export const PARSE = '_parse_'
 export const SKIP = '_skip_'
+export const SORT = '_sort_'
 export const WHERE = '_where_'
 
 export const requestConfigConstants = [ IS_ALL_DEEP_JOINS,
   IS_ALL_JOINS,
   JOINS,
   LIMIT,
+  SORT,
   SKIP
 ]
+
+export const postGetMethodNames = [ SORT,
+  LIMIT,
+  SKIP
+].map(constant => constant.match(/_(.*)_/)[1].toLowerCase())
 
 export const requestConfigKeysByConstant = {}
 requestConfigConstants.forEach(requestConfigConstant => {
