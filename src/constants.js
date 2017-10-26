@@ -2,6 +2,7 @@ import camelCase from 'lodash.camelcase'
 
 export const IS_ALL_DEEP_JOINS = '_is_all_deep_joins_'
 export const IS_ALL_JOINS = '_is_all_joins_'
+export const JOIN = '_join_'
 export const JOINS = '_joins_'
 export const LIMIT = '_limit_'
 export const PARSE = '_parse_'
